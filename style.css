@@ -5,3 +5,7 @@ body {
 i.fas.fa-thumbs-up {
     font-size: 2.5rem;
 }
+
+.pointer {
+  cursor: pointer;
+}
