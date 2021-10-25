@@ -9,3 +9,7 @@ i.fas.fa-thumbs-up {
 .pointer {
   cursor: pointer;
 }
+
+.liked {
+  color: blue;
+}

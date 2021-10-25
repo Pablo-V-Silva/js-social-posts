@@ -1,29 +1,34 @@
 const cards = [
   {
+    id: 1,
     accountImage: 'https://picsum.photos/50/50',
     accountName: 'Olivia Rodrigo',
     imagePost: 'https://picsum.photos/880/330',
     likes: 80
   },
   {
+    id: 2,
     accountImage: 'https://picsum.photos/51/51',
     accountName: 'Nasus il Gattopardo',
     imagePost: 'https://picsum.photos/880/331',
     likes: 20
   },
   {
+    id: 3,
     accountImage: 'https://picsum.photos/49/49',
     accountName: 'Yoda il Temibile',
     imagePost: 'https://picsum.photos/880/329',
     likes: 12
   },
   {
+    id: 4,
     accountImage: 'https://picsum.photos/52/52',
     accountName: "Stark l'Ineluttabile",
     imagePost: 'https://picsum.photos/881/330',
     likes: 123
   },
   {
+    id: 5,
     accountImage: 'https://picsum.photos/48/48',
     accountName: "Bubba dal'Uganda",
     imagePost: 'https://picsum.photos/880/333',
@@ -67,9 +72,17 @@ for (let i = 0; i < cards.length; i++) {
 
   const likeBtn = document.getElementsByClassName('like');
 
-  likeBtn.addEventListener('click', function () {
-
-  })
+  like(likeBtn, card);
 
 }
 
+function like(button, card) {
+  for (let i = 0; i < button.length; i++) {
+    const like = button[i];
+    like.addEventListener('click', function () {
+      like.classList.add('liked');
+      likedPost.push(card.id);
+      console.log(likedPost);
+    })
+  }
+}
