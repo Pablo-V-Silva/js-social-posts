@@ -31,6 +31,9 @@ const cards = [
   },
 ]
 
+const likedPost = []
+
+
 for (let i = 0; i < cards.length; i++) {
   let card = cards[i];
   let post = `
@@ -44,8 +47,8 @@ for (let i = 0; i < cards.length; i++) {
       </div>
       </div>
 
-      <div class="post my-3 w-100">
-        <img class=" rounded-3 text-center" src="${card.imagePost}" alt="post">
+      <div class="post my-3 w-100 text-center">
+        <img class=" rounded-3" src="${card.imagePost}" alt="post">
       </div>
 
       <div class="buttons d-flex justify-content-around align-items-center fs-3">
@@ -60,6 +63,13 @@ for (let i = 0; i < cards.length; i++) {
       </div>
   </div>`
 
-  document.querySelector('main').insertAdjacentHTML('beforeend', post)
+  document.querySelector('main').insertAdjacentHTML('beforeend', post);
+
+  const likeBtn = document.getElementsByClassName('like');
+
+  likeBtn.addEventListener('click', function () {
+
+  })
 
 }
+
